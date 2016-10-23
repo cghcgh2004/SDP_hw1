@@ -11,6 +11,29 @@
 			<font size="5"> Result:</font>
 			<input style="font-size:30px; width:270px;" type=text id="cnum" name="res">
 			<br>
+			<font size="4">Base 10:</font>
+			<output style="font-size:20px" id="num"></output>
+			<br>
+			<font size="4">Binary:</font>
+			<output style="font-size:20px" id="bnum"></output>
+			<br>
+			<font size="4">Octal:</font>
+			<output style="font-size:20px" id="onum"></output>
+			<br>
+			<font size="4">Hexadecimal:</font>
+			<output style="font-size:20px" id="hnum"></output>
+			<br>
+			<br>
+			<input style="font-size:18px;" type="button" value="show in different base" onclick="showin_different_base()">
 		</form>
+		 <script>
+			function showin_different_base() {
+				var x = parseInt(document.getElementById('cnum').value);
+				document.getElementById('num').value = x.toString(10);
+				document.getElementById('bnum').value = x.toString(2);
+				document.getElementById('onum').value = x.toString(8);
+				document.getElementById('hnum').value = x.toString(16);
+			}
+		</script>
 	</body>
 </html>		
