@@ -8,6 +8,16 @@
 			table, th, td {
 				border: 1px solid black;
 			}
+			.button {
+				background-color: #FFE0E0;
+				border: none;
+				color: brown;
+				text-align: center;
+				font-size: 30px;
+				margin: 2px 2px;
+				width:80px;
+				height:80px;
+			}
 		</style>
 	</head>
 	<body>
@@ -15,50 +25,57 @@
 		<form name="cal">
 			<table>
 				<tr>
-					<td colspan="4">
+					<td style="padding-top:10px; padding-bottom:10px;background-color: #FFE0E0;" colspan="4">
 						<font size="5"> Result:</font>
-						<input type=text id="cnum" name="res">
+						<input style="font-size:30px; width:270px;" type=text id="cnum" name="res">
 					</td>
 				</tr>
 				<tr>
-					<td><input type="button" value="0" onclick="cal.res.value+='0'"></td>
-					<td><input type="button" value="1" onclick="cal.res.value+='1'"></td>
-					<td><input type="button" value="2" onclick="cal.res.value+='2'"></td>
-					<td><input type="button" value="+" onclick="cal.res.value+='+'"></td>
+					<td><input type="button" class="button" value="0" onclick="cal.res.value+='0'"></td>
+					<td><input type="button" class="button" value="1" onclick="cal.res.value+='1'"></td>
+					<td><input type="button" class="button" value="2" onclick="cal.res.value+='2'"></td>
+					<td><input type="button" class="button" value="+" onclick="cal.res.value+='+'"></td>
 				</tr>
 				<tr>
-					<td><input type="button" value="3" onclick="cal.res.value+='3'"></td>
-					<td><input type="button" value="4" onclick="cal.res.value+='4'"></td>
-					<td><input type="button" value="5" onclick="cal.res.value+='5'"></td>
-					<td><input type="button" value="-" onclick="cal.res.value+='-'"></td>
+					<td><input type="button" class="button" value="3" onclick="cal.res.value+='3'"></td>
+					<td><input type="button" class="button" value="4" onclick="cal.res.value+='4'"></td>
+					<td><input type="button" class="button" value="5" onclick="cal.res.value+='5'"></td>
+					<td><input type="button" class="button" value="-" onclick="cal.res.value+='-'"></td>
 				</tr>
 				<tr>
-					<td><input type="button" value="6" onclick="cal.res.value+='6'"></td>
-					<td><input type="button" value="7" onclick="cal.res.value+='7'"></td>
-					<td><input type="button" value="8" onclick="cal.res.value+='8'"></td>
-					<td><input type="button" value="x" onclick="cal.res.value+='*'"></td>
+					<td><input type="button" class="button" value="6" onclick="cal.res.value+='6'"></td>
+					<td><input type="button" class="button" value="7" onclick="cal.res.value+='7'"></td>
+					<td><input type="button" class="button" value="8" onclick="cal.res.value+='8'"></td>
+					<td><input type="button" class="button" value="x" onclick="cal.res.value+='*'"></td>
 				</tr>
 				<tr>
-					<td><input type="button" value="9" onclick="cal.res.value+='9'"></td>
-					<td><input type="button" value="C" onclick="cal.res.value=''"></td>
-					<td><input type="button" value="=" onclick="cal.res.value=eval(cal.res.value)"></td>
-					<td><input type="button" value="/" onclick="cal.res.value+='/'"></td>
+					<td><input type="button" class="button" value="9" onclick="cal.res.value+='9'"></td>
+					<td><input type="button" class="button" value="C" onclick="cal.res.value=''"></td>
+					<td><input type="button" class="button" value="=" onclick="cal.res.value=eval(cal.res.value)"></td>
+					<td><input type="button" class="button" value="/" onclick="cal.res.value+='/'"></td>
 				</tr>
 			</table>
 			<br>
-			<font size="4">Base 10:</font>
-			<output style="font-size:20px" id="num"></output>
-			<br>
-			<font size="4">Binary:</font>
-			<output style="font-size:20px" id="bnum"></output>
-			<br>
-			<font size="4">Octal:</font>
-			<output style="font-size:20px" id="onum"></output>
-			<br>
-			<font size="4">Hexadecimal:</font>
-			<output style="font-size:20px" id="hnum"></output>
-			<br>
-			<br>
+			<table>
+				<tr>
+					<td style="width:270px;">
+						<br>
+						<font size="4"> Base 10:</font>
+						<output style="font-size:20px" id="num"></output>
+						<br>
+						<font size="4"> Binary:</font>
+						<output style="font-size:20px" id="bnum"></output>
+						<br>
+						<font size="4"> Octal:</font>
+						<output style="font-size:20px" id="onum"></output>
+						<br>
+						<font size="4"> Hexadecimal:</font>
+						<output style="font-size:20px" id="hnum"></output>
+						<br>
+						<br>
+					</td>
+				</tr>
+			</table>
 			<input style="font-size:18px;" type="button" value="show in different base" onclick="showin_different_base()">
 		</form>
 		 <script>
